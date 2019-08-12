@@ -1,144 +1,90 @@
-<a href='http://botpress.io'><img src='https://s3.amazonaws.com/botpress-io/images/screenshot-ui.png'></a>
-# [Botpress](https://botpress.io) — The only sane way of building great bots
+<a href='http://botpress.io'><img src='.github/assets/train_bar.gif'></a>
 
-[![CircleCI](https://circleci.com/gh/botpress/botpress.svg?style=svg)](https://circleci.com/gh/botpress/botpress)
+# [Botpress](https://botpress.io) — The open-source bot platform
 
-Botpress is an open-source bot creation tool written in Javascript. It is powered by a rich set of open-source modules built by the community. We like to say that **Botpress is like the Wordpress of Chatbots**; anyone can create and reuse other people's modules.
+[![CodeBuild](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiNTZoU0wzRmRQd29iWTFqVjliUzlvN0gzUUtoN25QVHlHMUhWYkZCWHpPQ3ZKQzFOMFh6Wm5EcHkxQW5SUmJuTFpLSDJXdURDVzNtRjM5d1BaU2pNUHhJPSIsIml2UGFyYW1ldGVyU3BlYyI6Iitoa0RBM091SnlXNTJwK2MiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://console.aws.amazon.com/codesuite/codebuild/projects/botpress-ce-tests/history?region=us-east-1)
+
+Botpress is an open-source all-in-one bot creation platform that provides all the tools you need to build, debug and deploy AI-based conversational assistants.
+
+- Developer-focused
+- Natural Language Understanding (NLU)
+- Built-in graphical interface & flow editor
+- Administration panel and bot management tools
+- Runs fully on-prem (control your data)
+- Support multiple messaging channels such as Webchat, SMS, Telegram, Facebook Messenger etc
 
 ---
+
+<a href='http://botpress.io'><img src='.github/assets/banner.gif'></a>
 
 ##### Learn Botpress
 
-| 📖 [Documentation](https://botpress.io/docs) | 🎓 [Examples](https://botpress.io/examples) | 🍿 [YouTube Tutorials](https://www.youtube.com/channel/UCEHfE71jUmWbe_5DtbO3fIA) |
-| ------------- | ------- | -------- |
+| 📖 [v12 **Documentation**](https://botpress.io/docs) | 🍿 [**YouTube Channel**](https://www.youtube.com/c/botpress) |
+| ---------------------------------------------------- | ------------------------------------------------------------ |
+
 
 ##### Follow us
 
-| 🖥 [Website](https://botpress.io) | 💬 [Slack](https://slack.botpress.io) | 📦 [Modules](https://www.npmjs.com/search?q=botpress) | 🚀 [Blog](https://botpress.io/blog) | 🐥 [Twitter](https://twitter.com/getbotpress)
-| ------------- | ------- | -------- | --------- | --------- |
+| 🖥 [Website](https://botpress.io) | 💬 [Community](https://help.botpress.io) | 🚀 [Blog](https://botpress.io/blog) | 🐥 [Twitter](https://twitter.com/getbotpress) |
+| -------------------------------- | ---------------------------------------- | ----------------------------------- | --------------------------------------------- |
 
----
 
-⚠️  Make sure you join our [Slack Community](https://slack.botpress.io) for help, announcements, gigs and fun!
+## Support the project ⭐
 
-## What is Botpress
+If you feel awesome and want to support us in a small way, please consider starring and sharing the repo! This helps us get visability and allow the community to grow. 🙏
 
-Botpress is on a mission to make useful bots ubiquitous by powering developers with the best possible tools to build & manage chatbots. We believe that in order to create great bots, major time should be spent on UX, **not** on the surrounding (and generic) features. 
+<img alt="Botpress" width="250" src=".github/assets/star_us.gif">
 
-Botpress is a free & open-source bot-building platform that ships with:
-* [**Connectors**](https://www.npmjs.com/search?q=botpress-connector) to the major chat platforms
-* [**Modular ecosystem**](https://www.npmjs.com/search?q=botpress) with over 29 modules
-* [**Flow-management**](https://botpress.io/docs/foundamentals/flow.html) system
-* **Graphical interface** to edit and manage your bot in production
-* **Notification centre** to see what's hapenning with your bot
-* [**Data persistence**](https://botpress.io/docs/foundamentals/database.html) to database
-* [**Built-in API**](https://botpress.io/docs/modules/api.html) to integrate with external systems
+## Pre-built Binaries
 
-## <a name="what-it-looks-like">What it looks like </a>
+You can download the binaries [here](https://s3.amazonaws.com/botpress-binaries/index.html).
 
-<img alt="Botpress" height="150" src="assets/shot_01.png"><img alt="Botpress" height="150" src="assets/shot_02.png"><img alt="Botpress" height="150" src="assets/shot_03.png">
+## Building from source
 
-## Getting Started Quickly
+**Prerequisites**: Node 10.11 (you can use [nvm](https://github.com/creationix/nvm)) and Yarn.
 
-The best way to get quickly get started using Botpress is to watch our [video tutorials](https://www.youtube.com/watch?v=HTpUmDz9kRY).
+1. Run `yarn` to fetch node packages.
+1. Run `yarn build` to build the core, the UI and the modules.
+1. Run `yarn start` to start the server.
 
-<a name="youtube" href="https://www.youtube.com/watch?v=HTpUmDz9kRY"><img alt="Botpress" height="150" src="assets/youtube_tutorial.png"></a>
+### Building issues
 
-## Installation
+If you encounter errors when building modules (timeout, random errors, etc), try the following:
 
-Botpress requires [node](https://nodejs.org) (version >= 4.6) and uses [npm](https://www.npmjs.com) as package manager.
-
-```
-npm install -g botpress
-```
-
-## Creating a bot
-
-Creating a bot is simple, you need to run [`botpress init`](https://botpress.io/docs/reference/cli.html#init) in a terminal inside an empty directory:
-
-```
-botpress init my-bot
-```
-
-Once your bot is created, you need to run [`botpress start`](https://botpress.io/docs/reference/cli.html#init) to start your bot:
-
-```
-botpress start
-```
-
-This will provide you locally a web interface available at **`http://localhost:3000`**
-
-## Adding stuff to your bot
-
-At this point, your bot does nothing, you need to add features. There are two ways to add features:
-- Installing modules
-- Coding
-
-### Installing modules
-
-For example, there's a `botpress-messenger` module that will make your bot connect to Facebook Messenger and easily send/receive messages.
-
-You can install modules directly in the web interface, or by using the [`botpress install`](https://botpress.io/docs/reference/cli.html#install) command:
-
-```
-botpress install messenger
-```
-
-Once installed, modules expose two things:
-- A graphical interface (available in the left panel). This makes configuration easy and convenient. You don't need to know about coding to use the graphical interface.
-- Features via APIs. Each module has a detailed documentation on how to use their API.
-
-### Coding to add features
-
-As the number of modules increase, we expect that the amount of code you'll need to write will lower everyday. Developers can add code directly in the bot (i.e. `index.js`) and access the core and modules features. For example, if you wish to respond to a `GETTING_STARTED` event on Facebook Messenger, you might code something along these lines:
-
-```js
-bp.hear({ type: 'postback', text: 'GETTING_STARTED' }, (event, next) => {
-  bp.messenger.sendText(event.user.id, 'Hello, human!')
-})
-```
-
-To create a basic Hello Human bot in one minute, please read the [Getting Started](https://botpress.io/docs/starting/setup.html).
-
-For learn all about Botpress, please read our full [Documentation](https://botpress.io/docs)
+1. Go in each module folder and type `yarn && yarn build`
 
 ## Documentation
 
-- [Getting Started](https://botpress.io/docs)
-- [Deploying your bot to **Heroku**](https://botpress.io/docs/deploy/heroku.html)
-- [How to create your own Module](https://botpress.io/docs/modules/how.html)
+### Developer's Guide
 
-## [🎓 Examples](https://botpress.io/examples)
+We use [Docusaurus](https://docusaurus.io/en/) to create the Developer's Guide.
 
-## Modules
+- To start the development server, run `yarn start:guide`
+- To generate the static files, run `yarn build:guide`. The generated files will appear under `/docs/guide/build`
+- To deploy a new version of the documentation, run `yarn run version <version here>`
 
-This is a non-exclusive list of modules Botpress has. See [the full list of modules](https://www.npmjs.com/search?q=botpress).
+### SDK Reference
 
-| Module                                                                       | Maintainer
-|-----------------------------------------------------------------------------|---------------------------
-| **[botpress-wit.ai](https://github.com/botpress/botpress-wit)** | [@danyfs](https://github.com/danyfs)
-| **[botpress-subscription](https://github.com/botpress/botpress-subscription)** | [@slvnperron](https://github.com/slvnperron)
-| **[botpress-terminal](https://github.com/botpress/botpress-terminal)** | [@slvnperron](https://github.com/slvnperron)
-| **[botpress-analytics](https://github.com/botpress/botpress-analytics)** | [@danyfs](https://github.com/danyfs)
-| **[botpress-broadcast](https://github.com/botpress/botpress-broadcast)** | [@slvnperron](https://github.com/slvnperron)
-| **[botpress-rivescript](https://github.com/botpress/botpress-rivescript)** | [@danyfs](https://github.com/danyfs)
-| **[botpress-messenger](https://github.com/botpress/botpress-messenger)** | [@slvnperron](https://github.com/slvnperron)
-| **[botpress-slack](https://github.com/botpress/botpress-slack)** | [@danyfs](https://github.com/danyfs)
-| **[botpress-discord](https://github.com/TheFreakLord/botpress-discord)** | [@TheFreakLord](https://github.com/TheFreakLord)
-| **[botpress-dialog](https://github.com/dialoganalytics/botpress-dialog)** | [@phildionne](https://github.com/phildionne)
-| **[botpress-scheduler](https://github.com/botpress/botpress-scheduler)** | [@slvnperron](https://github.com/slvnperron)
-| **[botpress-hitl](https://github.com/botpress/botpress-hitl)** | [@danyfs](https://github.com/danyfs)
-| **[botpress-api.ai](https://github.com/botpress/botpress-api.ai)** | [@slvnperron](https://github.com/slvnperron)
-| **[botpress-web](https://github.com/botpress/botpress-web)** | [@slvnperron](https://github.com/slvnperron)
+We use [TypeDoc](https://github.com/TypeStrong/typedoc) to generate the SDK Reference directly from the source code.
+
+- Run `yarn build:reference` to generate the documentation. The static files will appear under `/docs/reference/public`.
 
 ## Contributing
-Check out our [contributing guide](./CONTRIBUTING.md) and our [community code of conduct](./CODE_OF_CONDUCT.md).
 
-## Community
+Thank you for your interest in Botpress. Here are some of the many ways to contribute.
 
-There's a [Slack community](https://slack.botpress.io) where you are welcome to join us, ask any question and even help others.
+- Check out our [contributing guide](/.github/CONTRIBUTING.md)
+- Check misspelling in our docs.
+- Look at our [code of conduct](/.github/CODE_OF_CONDUCT.md)
+- Engage with us on Social Media
+  - Follow us on [Twitter](https://twitter.com/getbotpress)
+- Answer and ask questions on the [Forum](https://help.botpress.io/)
 
-Get an invite and join us now! 👉 [https://slack.botpress.io](https://slack.botpress.io)
+For starters, there are some open issues with the [first good issue][starter-label] tag which are ideal for starting to contribute. They are all relatively easy to get started with.
+
+Contributions to Botpress will be dual-licensed under AGPLv3 and the Botpress Proprietary License. This means that all contributors need to agree to the dual-license before their contributions can be accepted.
+
+Please follow the [Conventional Commits](https://conventionalcommits.org/) specs when doing commits. **Pull requests not respecting this commit style will be rejected.**
 
 ## License
 
@@ -146,8 +92,4 @@ Botpress is dual-licensed under [AGPLv3](/licenses/LICENSE_AGPL3) and the [Botpr
 
 By default, any bot created with Botpress is licensed under AGPLv3, but you may change to the Botpress License from within your bot's web interface in a few clicks.
 
-For more information about how the dual-license works and why it works that way please see the <a href="https://botpress.io/faq">FAQS</a>.
-
-## Credits
-
-Emoji provided free by [EmojiOne](http://emojione.com)
+For more information about how the dual-license works and why it works that way, please see the <a href="https://botpress.io/faq">FAQS</a>.

@@ -1,0 +1,15 @@
+$toolbar-height: 36px;
+
+.diagram {
+  height: calc(100% - #{$toolbar-height});
+  background-color: white;
+}
+
+.diagram :global(.storm-diagrams-canvas) {
+  height: calc(100%);
+  background: url('/assets/ui-studio/public/img/grid.png') repeat;
+}
+
+.wrapper {
+  background-color: white;
+}

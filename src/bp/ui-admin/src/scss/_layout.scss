@@ -1,0 +1,109 @@
+// Layout
+
+.bp-header {
+  background-color: var(--c-background--dark-2);
+  border-bottom: 1px solid #999;
+
+  &__logo {
+    width: 140px;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    color: var(--c-neutral--light-3);
+    font-size: 14px;
+  }
+
+  .dropdown-toggle.nav-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__warning {
+    background-color: red;
+    color: var(--c-neutral--light-3);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+
+    svg {
+      margin-right: 10px;
+      margin-top: -2px;
+      width: 15px;
+    }
+
+    a {
+      color: var(--c-neutral--light-3);
+      margin: 0;
+    }
+  }
+}
+
+.bp-main-content {
+  min-height: calc(100vh - 58px);
+
+  .bp-header__warning + & {
+    min-height: calc(100vh - 92px);
+  }
+
+  &-header {
+    padding: 5px;
+    margin-bottom: 10px;
+
+    &__nav {
+      padding: 0;
+    }
+  }
+
+  &-main {
+    padding: 0px 0px;
+  }
+
+  &__title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+}
+
+.bp_container {
+  &-header {
+    padding-top: 20px;
+    margin-bottom: 40px;
+    background: var(--c-neutral--light-2);
+    border-bottom: 1px solid var(--c-background--light-3);
+  }
+
+  &-tabs {
+    border-bottom: 1px solid var(--c-background--light-3);
+    position: relative;
+    top: 1px;
+
+    .nav-item {
+      margin-bottom: -1px;
+      cursor: pointer;
+    }
+
+    .nav-link {
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &-fullwidth {
+    .container {
+      max-width: 100% !important;
+    }
+  }
+}
+
+.bringMeHome {
+  width: 50px;
+  margin-top: 1px;
+  font-size: 140%;
+
+  &:hover {
+    color: #666666;
+  }
+}
